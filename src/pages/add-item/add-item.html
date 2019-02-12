@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>new item </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label stacked> item name </ion-label>
+        <ion-input type="text" [(ngModel)]="item.name" pplaceholder="item name"></ion-input>
+    </ion-item>
+<ion-label> Item type </ion-label>	
+ <ion-list radio-group [(ngModel)]="item.type" placeholder ="item type"> 
+<!-- <ion-select  [(ngModel)]="item.type" placeholder="item type" > -->
+<ion-item *ngFor="let category  of categories"> 
+
+
+    <ion-label>{{category.id}}</ion-label>
+	<ion-radio value ="{{category.id}}" ></ion-radio>
+
+	 </ion-item>
+<!-- </ion-select>		 -->
+ </ion-list> 
+
+    <ion-item>
+        <ion-label stacked> item price </ion-label>
+        <ion-input type="number" [(ngModel)]="item.price" placeholder="item price"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked> item quantity</ion-label>
+        <ion-input type="number" [(ngModel)]="item.quantity" placeholder="available  quantity"></ion-input>
+    </ion-item>
+    <button ion-button icon-only (click)="addImage()">
+        add image (optional)
+        <ion-icon name="add"></ion-icon>
+
+    </button>
+    <img src="{{captureDataUrl}}" width="80" height="80" alt="chosen image" *ngIf="captureDataUrl" />
+    <button ion-button block (click)="addItem()"> add item </button>
+</ion-content>

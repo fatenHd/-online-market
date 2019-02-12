@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>editItem</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="item.name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Price</ion-label>
+        <ion-input type="number" [(ngModel)]="item.price"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Available Quantity </ion-label>
+        <ion-input type="number" [(ngModel)]="item.quantity"></ion-input>
+    </ion-item>
+<button ion-button icon-only (click)="addImage()">
+        add image (optional)
+        <ion-icon name="add"></ion-icon>
+
+    </button>
+    <img src="{{captureDataUrl}}" width="80" height="80" alt="chosen image" *ngIf="captureDataUrl" />
+    
+    <button ion-button (click)="updateItem()">Update Item</button>
+</ion-content>

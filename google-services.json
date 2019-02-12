@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "973163300075",
+    "firebase_url": "https://online-market-82ee9.firebaseio.com",
+    "project_id": "online-market-82ee9",
+    "storage_bucket": "online-market-82ee9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973163300075:android:345a21bbc0d16c2e",
+        "android_client_info": {
+          "package_name": "io.admin.shopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973163300075-uoh70v4t0agnho01aflelj9q0qdgd4qk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlJTXeRU76Ub5n17r4JjnOnIABjNGmsvw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

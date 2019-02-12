@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addOffer</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<ion-searchbar [(ngModel)] ="searchTerm" (ionInput) ="getItems()"> </ion-searchbar>
+<ion-list radio-group [(ngModel)]="categoryId" (ionChange)="viewItems()">
+<ion-item *ngFor="let category  of categories"> 
+    <ion-label>{{category.name}}</ion-label>
+	<ion-radio value ="{{category.id}}" ></ion-radio>
+	</ion-item>
+</ion-list>
+<ion-searchbar [(ngModel)] ="searchTerm" (ionInput) ="getItems()"> </ion-searchbar>
+    <ion-list>  
+	<ion-item *ngFor="let item of items"> 
+	<ion-label>{{item.name}}</ion-label>
+	<ion-checkbox [(ngModel)] ="item.checked" name ="item.name">  </ion-checkbox>
+	</ion-item>
+	</ion-list>
+	  <ion-item>  
+	          <ion-label floating>Discount</ion-label>  
+          <ion-input type="number" [(ngModel)]="discount"   placeholder ="set a discount percentage"></ion-input>  
+		  </ion-item>  
+		  <ion-item>  
+          <ion-label floating>discount validity</ion-label>  
+          <ion-datetime displayFormat="DD/MMM/YYYY" [(ngModel)]="offerValidity" placeholder="enter valid date for this offer "></ion-datetime>  
+  </ion-item>  
+	<button ion-button (click)="setOffer()"> add offer </button>
+    </ion-content>
