@@ -3,21 +3,20 @@
     <ion-title>
       home
     </ion-title>
-	   
-  
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-
-      <button ion-button icon-only block color="primary" (click)="addItem()">  add item
+	    <div *ngIf ="admin =='admin7789@gmail.com'"> 
+      <button   ion-button icon-only block color="primary" (click)="addItem()">  add item
       <ion-icon name="add"></ion-icon>
       </button>
       <button ion-button icon-only block color="primary" (click)="addOffer()">
           add offer 
           <ion-icon name="add"></ion-icon>
       </button>
+  
+   </div> 
+  </ion-navbar>
+</ion-header>
 
+<ion-content padding>
 
     <button ion-button block color ="primary" (click)="viewCategories()"> categories</button>
 

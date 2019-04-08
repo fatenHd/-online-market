@@ -24,7 +24,9 @@ export class MyApp {
         });
 
         platform.ready().then(() => {
+			/*
             fcm.onNotification().subscribe(data => {
+				
                 if (data.wasTapped) {
                     authUnsubscribe.unsubscribe();
                     //Notification was received on device tray and tapped by the user.
@@ -40,6 +42,7 @@ export class MyApp {
                     });
                 }
             });
+			*/
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();

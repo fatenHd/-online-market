@@ -8,11 +8,25 @@ import{Auth} from '../../providers/auth';
   templateUrl: 'home.html'
 })
 export class HomePage {
+	public admin:string;
   constructor(public navCtrl: NavController, public auth:Auth) {
-
+	  /*
+this.auth.getUserinfo().then((user) => {
+	alert(JSON.stringify(user));
+	this.admin = user.admin;
+});
+*/
+this.admin = firebase.auth().currentUser.email;
+alert(JSON.stringify(this.admin));
   }
-
-  
+/*
+  ionViewDidLoad() {
+this.auth.getUserinfo().then((user) => {
+	alert(JSON.stringify(user));
+	this.admin = user.admin;
+});
+	
+  }*/	
   addItem(): void {
       this.navCtrl.push('AddItem');
   }
